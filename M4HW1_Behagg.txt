@@ -1,0 +1,42 @@
+// declare variables
+declare constant double price = 4.79
+declare constant double base = 2000.00 
+declare string name = ""
+declare double sold, returned, net_sold, sales_amount, rate, commision, salary = 0
+
+//commision rate structure
+if (sold >= 0) and (sold <= 100) then
+    set rate = 0.10
+else if (sold >= 101) and (sold >= 199) then
+    set rate = 0.15
+else if (sold >= 200) and (sold <=299) then
+    set rate = 0.20
+else if sold >= 300 then
+    set rate = 0.25
+end if
+
+//gather input data
+input "what is your name?"
+set name = input
+
+input "how many widgets sold?"
+set sold = input
+
+input "how many widgets returned?"
+set returned = input
+
+
+//calculate output
+set net_sold = sold - returned
+set sales_amount = net_sold * price
+set commision = rate * sales_amount
+set salary = base + commision
+
+//display output
+display "name: ", name
+display "widgets sold: ", sold
+display "widgets returned: ", returned
+display "net sales: ", net_sold
+display "sales amount: ", sales_amount
+display "commision amount: ", commision
+display "salary: ", salary

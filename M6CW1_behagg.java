@@ -1,3 +1,9 @@
+/**
+ * Parker Behagg
+ * M6CW1
+ * 4/15/26
+ */
+
 import java.util.Scanner;
 public class M6CW1_behagg {
     public static void main(String[] args) {
@@ -49,7 +55,7 @@ public class M6CW1_behagg {
                 displayMenu();
                 break;
         } 
-        In.close();
+
     }
     public static void getM6HW1() {
         System.out.println("Getting M6HW1");
